@@ -1,0 +1,16 @@
+{
+	"name": "monitoring-channel-start-vsi",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+    "deploy": "npm run predeploy && ibmcloud fn action update monitoring-channel/start-virtual-server-instance action.zip --kind nodejs:12",
+    "predeploy": "npm install && zip -r action.zip *",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Victor Shinya <vshinya@br.ibm.com>",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"ibm-vpc": "^0.6.0"
+	}
+}
